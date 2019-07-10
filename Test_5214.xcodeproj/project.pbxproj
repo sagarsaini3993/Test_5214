@@ -19,6 +19,7 @@
 		9B55450622D6186C00BB7194 /* InterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B55450522D6186C00BB7194 /* InterfaceController.swift */; };
 		9B55450822D6186C00BB7194 /* ExtensionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B55450722D6186C00BB7194 /* ExtensionDelegate.swift */; };
 		9B55450A22D6186D00BB7194 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9B55450922D6186D00BB7194 /* Assets.xcassets */; };
+		9B55451A22D6228F00BB7194 /* SecondInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B55451922D6228F00BB7194 /* SecondInterfaceController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -80,6 +81,7 @@
 		9B55450722D6186C00BB7194 /* ExtensionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionDelegate.swift; sourceTree = "<group>"; };
 		9B55450922D6186D00BB7194 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9B55450B22D6186D00BB7194 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9B55451922D6228F00BB7194 /* SecondInterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondInterfaceController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -147,6 +149,7 @@
 			isa = PBXGroup;
 			children = (
 				9B55450522D6186C00BB7194 /* InterfaceController.swift */,
+				9B55451922D6228F00BB7194 /* SecondInterfaceController.swift */,
 				9B55450722D6186C00BB7194 /* ExtensionDelegate.swift */,
 				9B55450922D6186D00BB7194 /* Assets.xcassets */,
 				9B55450B22D6186D00BB7194 /* Info.plist */,
@@ -296,6 +299,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9B55450822D6186C00BB7194 /* ExtensionDelegate.swift in Sources */,
+				9B55451A22D6228F00BB7194 /* SecondInterfaceController.swift in Sources */,
 				9B55450622D6186C00BB7194 /* InterfaceController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

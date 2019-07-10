@@ -21,6 +21,8 @@ class InterfaceController: WKInterfaceController {
     override func willActivate() {
         // This method is called when watch view controller is about to be visible to user
         super.willActivate()
+        
+        
     }
     
     override func didDeactivate() {
@@ -28,4 +30,22 @@ class InterfaceController: WKInterfaceController {
         super.didDeactivate()
     }
 
+    @IBAction func btnPressedEnterName() {
+        
+        presentTextInputController(withSuggestions: [""], allowedInputMode: .plain) { (results) in
+            
+            if (results != nil && results!.count > 0) {
+                // 2. write your code to process the person's response
+                let userResponse = results?.first as? String
+                //                self.responseLabel.setText(userResponse)
+                print(userResponse!)
+                UserDefaults.standard.set(userResponse, forKey: "name")
+            }
+            
+            
+            self.pushController(withName: "mySegue", context: nil)
+            
+        }
+        
+    }
 }
