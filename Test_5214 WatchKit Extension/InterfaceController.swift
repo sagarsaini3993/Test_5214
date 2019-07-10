@@ -39,7 +39,7 @@ class InterfaceController: WKInterfaceController {
                 let userResponse = results?.first as? String
                 //                self.responseLabel.setText(userResponse)
                 print(userResponse!)
-                UserDefaults.standard.set(userResponse, forKey: "name")
+                UserDefaults.standard.set(userResponse!, forKey: "name")
             }
             
             

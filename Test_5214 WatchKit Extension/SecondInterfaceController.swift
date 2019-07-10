@@ -12,6 +12,8 @@ import Foundation
 
 class SecondInterfaceController: WKInterfaceController {
 
+    @IBOutlet weak var labelName: WKInterfaceLabel!
+    
     override func awake(withContext context: Any?) {
         super.awake(withContext: context)
         
@@ -22,8 +24,10 @@ class SecondInterfaceController: WKInterfaceController {
         // This method is called when watch view controller is about to be visible to user
         super.willActivate()
         
-        var name = UserDefaults.standard.string(forKey: "name")
-        print(name)
+        let name = UserDefaults.standard.string(forKey: "name")
+        print(name!)
+        
+        labelName.setText("Hello \(String(describing: name!))")
     }
 
     override func didDeactivate() {
