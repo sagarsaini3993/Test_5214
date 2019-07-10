@@ -23,6 +23,7 @@
                     </items>
                 </controller>
             </objects>
+            <point key="canvasLocation" x="14" y="28"/>
         </scene>
         <!--mySegue-->
         <scene sceneID="hdc-70-fc7">
@@ -31,8 +32,16 @@
                     <items>
                         <label alignment="left" text="Label" id="z9E-R5-aYt"/>
                         <label alignment="left" text="Choose difficulty:" id="Ruv-8P-iof"/>
-                        <button width="1" alignment="left" title="Easy" id="VPj-Ot-Ts3"/>
-                        <button width="1" alignment="left" title="hard" id="hxQ-Xa-Nyp"/>
+                        <button width="1" alignment="left" title="Easy" id="VPj-Ot-Ts3">
+                            <connections>
+                                <action selector="btnEasyPressed" destination="8kO-Ik-Ozz" id="6I8-uF-emk"/>
+                            </connections>
+                        </button>
+                        <button width="1" alignment="left" title="hard" id="hxQ-Xa-Nyp">
+                            <connections>
+                                <action selector="btnHardPressed" destination="8kO-Ik-Ozz" id="EnL-kG-XLa"/>
+                            </connections>
+                        </button>
                     </items>
                     <connections>
                         <outlet property="labelName" destination="z9E-R5-aYt" id="2I0-Ku-gAJ"/>
@@ -40,6 +49,26 @@
                 </controller>
             </objects>
             <point key="canvasLocation" x="320" y="29"/>
+        </scene>
+        <!--mySegue1-->
+        <scene sceneID="ggi-PX-jgD">
+            <objects>
+                <controller identifier="mySegue1" id="RfL-A1-Sak" customClass="ThirdInterfaceController" customModule="Test_5214_WatchKit_Extension">
+                    <items>
+                        <imageView width="79" alignment="left" id="BBQ-za-jQA"/>
+                        <imageView width="77" alignment="left" id="nCB-SC-Z1a"/>
+                        <imageView width="79" alignment="left" id="z71-I6-SeK"/>
+                        <imageView width="79" alignment="left" id="wpP-Ow-tzz"/>
+                    </items>
+                    <connections>
+                        <outlet property="imgView1" destination="BBQ-za-jQA" id="YUy-70-kTH"/>
+                        <outlet property="imgView2" destination="nCB-SC-Z1a" id="el3-Os-4ZP"/>
+                        <outlet property="imgView3" destination="z71-I6-SeK" id="LQs-jO-UQ1"/>
+                        <outlet property="imgView4" destination="wpP-Ow-tzz" id="OC0-64-wwn"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="675" y="39.5"/>
         </scene>
     </scenes>
 </document>
