@@ -25,7 +25,7 @@ class SecondInterfaceController: WKInterfaceController {
         super.willActivate()
         
         let name = UserDefaults.standard.string(forKey: "name")
-        print(name!)
+//        print(name!)
         
         labelName.setText("Hello \(String(describing: name!))")
     }
@@ -37,10 +37,15 @@ class SecondInterfaceController: WKInterfaceController {
 
     @IBAction func btnEasyPressed() {
         
+        UserDefaults.standard.set("Soft", forKey: "soft")
         self.pushController(withName: "mySegue1", context: nil)
 
         
     }
     @IBAction func btnHardPressed() {
+        
+        UserDefaults.standard.set(nil, forKey: "hard")
+        self.pushController(withName: "mySegue1", context: nil)
+        
     }
 }

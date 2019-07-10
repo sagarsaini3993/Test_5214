@@ -8,9 +8,8 @@
 
 import WatchKit
 import Foundation
-import WatchConnectivity
 
-class InterfaceController: WKInterfaceController, WCSessionDelegate {
+class InterfaceController: WKInterfaceController {
     
 
     override func awake(withContext context: Any?) {
@@ -24,16 +23,15 @@ class InterfaceController: WKInterfaceController, WCSessionDelegate {
         super.willActivate()
         
         
-        if (WCSession.isSupported()) {
-            print("Watch: Phone supports WatchConnectivity!")
-            let session = WCSession.default
-            session.delegate = self
-            session.activate()
-        }
-        else {
-            print("Watch: Phone does not support WatchConnectivity")
-        }
-        
+//        if (WCSession.isSupported()) {
+//            print("Watch: Phone supports WatchConnectivity!")
+//            let session = WCSession.default
+//            session.delegate = self
+//            session.activate()
+//        }
+//        else {
+//            print("Watch: Phone does not support WatchConnectivity")
+//        }
         
     }
     
@@ -47,26 +45,23 @@ class InterfaceController: WKInterfaceController, WCSessionDelegate {
         presentTextInputController(withSuggestions: [""], allowedInputMode: .plain) { (results) in
             
             if (results != nil && results!.count > 0) {
-                // 2. write your code to process the person's response
                 let userResponse = results?.first as? String
-                //                self.responseLabel.setText(userResponse)
-                print(userResponse!)
+//                print(userResponse!)
                 UserDefaults.standard.set(userResponse!, forKey: "name")
             }
-            
-            
             self.pushController(withName: "mySegue", context: nil)
-            
         }
         
     }
     
-    func session(_ session: WCSession, activationDidCompleteWith activationState: WCSessionActivationState, error: Error?) {
-        
-    }
+//    func session(_ session: WCSession, activationDidCompleteWith activationState: WCSessionActivationState, error: Error?) {
+//        
+//    }
     
-    func session(_ session: WCSession, didReceiveMessage message: [String : Any]) {
-        print("\(String(describing: message["sequence"]))")
-    }
+//    func session(_ session: WCSession, didReceiveMessage message: [String : Any]) {
+//        print("WATCH : Received data is : \(String(describing: message["sequence"]!))")
+//
+//        UserDefaults.standard.set(message["sequence"], forKey: "dataToPass")
+//    }
     
 }
