@@ -55,7 +55,13 @@
             <objects>
                 <controller identifier="mySegue1" id="RfL-A1-Sak" customClass="ThirdInterfaceController" customModule="Test_5214_WatchKit_Extension">
                     <items>
-                        <imageView width="79" alignment="left" id="BBQ-za-jQA"/>
+                        <button width="1" alignment="left" title="Restart" id="o6I-W6-lfk">
+                            <connections>
+                                <action selector="btnPlayAgainPressed" destination="RfL-A1-Sak" id="h7R-Wo-HMP"/>
+                            </connections>
+                        </button>
+                        <label alignment="left" text="Label" id="1yT-rw-lYd"/>
+                        <imageView width="77" alignment="left" id="BBQ-za-jQA"/>
                         <imageView width="77" alignment="left" id="nCB-SC-Z1a"/>
                         <imageView width="79" alignment="left" id="z71-I6-SeK"/>
                         <imageView width="79" alignment="left" id="wpP-Ow-tzz"/>
@@ -65,6 +71,7 @@
                         <outlet property="imgView2" destination="nCB-SC-Z1a" id="el3-Os-4ZP"/>
                         <outlet property="imgView3" destination="z71-I6-SeK" id="LQs-jO-UQ1"/>
                         <outlet property="imgView4" destination="wpP-Ow-tzz" id="OC0-64-wwn"/>
+                        <outlet property="lblWinLoose" destination="1yT-rw-lYd" id="yys-Pl-3i1"/>
                     </connections>
                 </controller>
             </objects>

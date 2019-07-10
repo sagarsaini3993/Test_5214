@@ -6,6 +6,8 @@
 //  Copyright © 2019 MacStudent. All rights reserved.
 //
 
+var a : Bool = true
+
 import WatchKit
 import Foundation
 
@@ -37,12 +39,16 @@ class SecondInterfaceController: WKInterfaceController {
 
     @IBAction func btnEasyPressed() {
         
+        a = true
+        
         UserDefaults.standard.set("Soft", forKey: "soft")
         self.pushController(withName: "mySegue1", context: nil)
 
         
     }
     @IBAction func btnHardPressed() {
+        
+        a = false
         
         UserDefaults.standard.set(nil, forKey: "hard")
         self.pushController(withName: "mySegue1", context: nil)
